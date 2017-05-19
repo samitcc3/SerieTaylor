@@ -1,0 +1,16 @@
+{
+   "build": {
+      "type": "maven",
+      "goal": "package"
+   },
+   "deploy": {
+      "container": "GLASSFISH4",
+      "war": [
+         {
+            "file": "target/SerieTaylor.war",
+            "context": "/SerieTaylor",
+            "checkMe": "/SerieTaylor/ping"
+         }
+      ]
+   }
+}
