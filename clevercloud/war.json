@@ -1,0 +1,16 @@
+{
+   "build": {
+      "type": "ant",
+      "goal": "dist"
+   },
+   "deploy": {
+      "container": "GLASSFISH4",
+      "war": [
+         {
+            "file": "dist/SerieTaylor.war",
+            "context": "/SerieTaylor",
+            "checkMe": "/SerieTaylor/ping"
+         }
+      ]
+   }
+}
